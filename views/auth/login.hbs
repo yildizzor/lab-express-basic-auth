@@ -1,0 +1,32 @@
+<h2>Welcome Login Page</h2>
+
+<div>
+  <form action="/login" method="POST">
+
+    <label form="user-name">
+
+      
+    <label form="email-adres">
+
+      <input
+        id="email-adres"
+        type="email"
+        name="email"
+        placeholder="Email Adress"
+      />
+    </label><br />
+    <br />
+
+    <label form="password">
+
+      <input id="password" type="text" name="password" placeholder="Password" />
+    </label><br />
+    <br />
+    <button>Login</button>
+  </form>
+
+</div>
+
+{{#if errorMessage}}
+  <p class="error">{{errorMessage}}</p>
+{{/if}}
