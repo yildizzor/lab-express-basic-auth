@@ -4,35 +4,41 @@
 
   <form action="/signup" method="POST">
 
-    <label form="user-name">
+    <input
+      id="user-name"
+      type="text"
+      name="username"
+      placeholder="Username"
+      required
+    />
+    <br />
+    <br />
 
-      <input
-        id="user-name"
-        type="text"
-        name="username"
-        placeholder="Username"
-      />
-    </label>
-    <br /> <br />
+    <input
+      id="email-adres"
+      type="email"
+      name="email"
+      placeholder="Email Adress"
+      required
+    />
+    <br />
+    <br />
 
-    <label form="email-adres">
-
-      <input
-        id="email-adres"
-        type="email"
-        name="email"
-        placeholder="Email Adress"
-      />
-    </label><br /> <br />
-
-    <label form="password">
-
-      <input id="password" type="text" name="password" placeholder="Password" />
-    </label><br /> <br />
-<button>Submit</button>
+    <input
+      id="password"
+      type="password"
+      name="password"
+      placeholder="Password"
+      required
+    />
+    <br />
+    <br />
+    <button>Submit</button>
   </form>
 
+  <div>
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </div>
 </div>
-{{#if errorMessage}}
-  <p class="error">{{errorMessage}}</p>
-{{/if}}
